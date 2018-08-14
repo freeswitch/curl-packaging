@@ -5,7 +5,7 @@
     <Import Project="basedir.props" Condition=" '$(BaseDirImported)' == ''"/>
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
-    <curlVersion>7.59.0</curlVersion>
+    <curlVersion>7.61.0</curlVersion>
     <curlLibDir>$(BaseDir)curl-$(curlVersion)</curlLibDir>
   </PropertyGroup>
   <PropertyGroup>

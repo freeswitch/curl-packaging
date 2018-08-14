@@ -1,0 +1,11 @@
+.vs/*
+Win32/*
+x64/*
+out/*
+curl-7.*
+curl-7.*/
+openssl-1.*
+openssl-1.*/
+zlib-1.*
+zlib-1.*/
+7za*.exe

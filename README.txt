@@ -1,0 +1,1 @@
+Please note that we use Visual Studio 2017 (not 2015) to build curl since curl version 7.61.0
