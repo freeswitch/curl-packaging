@@ -24,7 +24,7 @@
        extractto: Folder to extract an archive to
    -->
 
-  <Target Name="opensslBinariesDownloadTarget" BeforeTargets="CustomBuild;PreBuildEvent" DependsOnTargets="7za">  
+  <Target Name="opensslBinariesDownloadTarget" BeforeTargets="Build" DependsOnTargets="7za">  
       <DownloadPackageTask 
            package="http://files.freeswitch.org/windows/packages/openssl/$(OpenSSLVersion)/openssl-$(OpenSSLVersion)-binaries-$(Platform.ToLower())-$(Configuration.ToLower()).zip"
            expectfileordirectory="$(BaseDir)openssl-$(OpenSSLVersion)\binaries\$(Platform.ToLower())\$(Configuration.ToLower())" 
@@ -33,7 +33,7 @@
            extractto="$(BaseDir)"
       />
   </Target> 
-  <Target Name="opensslHeadersDownloadTarget" BeforeTargets="CustomBuild;PreBuildEvent" DependsOnTargets="7za">  
+  <Target Name="opensslHeadersDownloadTarget" BeforeTargets="Build" DependsOnTargets="7za">  
       <DownloadPackageTask 
            package="http://files.freeswitch.org/windows/packages/openssl/$(OpenSSLVersion)/openssl-$(OpenSSLVersion)-headers.zip"
            expectfileordirectory="$(BaseDir)openssl-$(OpenSSLVersion)\include" 

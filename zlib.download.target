@@ -24,7 +24,7 @@
        extractto: Folder to extract an archive to
    -->
 
-  <Target Name="zlibBinariesDownloadTarget" BeforeTargets="CustomBuild;PreBuildEvent" DependsOnTargets="7za">  
+  <Target Name="zlibBinariesDownloadTarget" BeforeTargets="Build" DependsOnTargets="7za">  
       <DownloadPackageTask 
            package="http://files.freeswitch.org/windows/packages/zlib/$(zlibVersion)/zlib-$(zlibVersion)-binaries-$(Platform.ToLower())-$(Configuration.ToLower()).zip"
            expectfileordirectory="$(BaseDir)zlib-$(zlibVersion)\binaries\$(Platform.ToLower())\$(Configuration.ToLower())\zlib.lib" 
@@ -34,7 +34,7 @@
       />
   </Target> 
 
-  <Target Name="zlibHeadersDownloadTarget" BeforeTargets="CustomBuild;PreBuildEvent" DependsOnTargets="zlibBinariesDownloadTarget">  
+  <Target Name="zlibHeadersDownloadTarget" BeforeTargets="Build" DependsOnTargets="zlibBinariesDownloadTarget">  
       <DownloadPackageTask 
            package="http://files.freeswitch.org/windows/packages/zlib/$(zlibVersion)/zlib-$(zlibVersion)-headers.zip"
            expectfileordirectory="$(BaseDir)zlib-$(zlibVersion)\include" 
