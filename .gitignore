@@ -9,3 +9,5 @@ openssl-1.*/
 zlib-1.*
 zlib-1.*/
 7za*.exe
+Debug/
+Release/

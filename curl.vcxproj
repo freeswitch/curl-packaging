@@ -49,7 +49,7 @@
   <PropertyGroup Label="UserMacros" />
   <Target Name="Build">
     <MakeDir Directories="$(SrcDir)" />
-    <Exec Command="cmake .. -DBUILD_SHARED_LIBS=Off -DCMAKE_USE_OPENSSL=1 -DOPENSSL_INCLUDE_DIR=$(BaseDir)\openssl-$(OpenSSLVersion)\include\;$(BaseDir)\openssl-$(OpenSSLVersion)\include_x64\ -DOPENSSL_ROOT_DIR=$(BaseDir)\openssl-$(OpenSSLVersion)\binaries\$(Platform)\$(Configuration) -DZLIB_ROOT=$(BaseDir)\zlib-$(zlibVersion)\binaries\$(Platform)\$(Configuration) -DCMAKE_GENERATOR_PLATFORM=$(Platform) -T $(DefaultPlatformToolset)" WorkingDirectory="$(SrcDir)"/>
+    <Exec Command="cmake .. -DBUILD_SHARED_LIBS=Off -DCMAKE_USE_OPENSSL=1 -DOPENSSL_INCLUDE_DIR=$(BaseDir)\openssl-$(OpenSSLVersion)\include\;$(BaseDir)\openssl-$(OpenSSLVersion)\include_x64\ -DOPENSSL_ROOT_DIR=$(BaseDir)\openssl-$(OpenSSLVersion)\binaries\$(Platform)\$(Configuration) -DZLIB_ROOT=$(BaseDir)\zlib-$(zlibVersion)\binaries\$(Platform)\$(Configuration) -DCMAKE_GENERATOR_PLATFORM=$(Platform) -T v141" WorkingDirectory="$(SrcDir)"/>
     <MsBuild Projects="$(SrcDir)\lib\libcurl.vcxproj " Properties="Configuration=$(Configuration);Platform=$(Platform)" />
   </Target>
 </Project>

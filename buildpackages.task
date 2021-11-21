@@ -70,6 +70,7 @@ using System.Diagnostics;
                 Directory.CreateDirectory(package_root + @"\binaries\$(Platform)\$(Configuration)");
                 if ("$(Configuration.ToLower())" == "debug" ) {
                     File.Copy(from_folder + @"build-$(Platform)\lib\$(Configuration)\libcurl-d.lib", package_root + @"\binaries\$(Platform)\$(Configuration)\curl.lib");
+                    File.Copy(from_folder + @"build-$(Platform)\lib\libcurl.dir\$(Configuration)\libcurl.pdb", package_root + @"\binaries\$(Platform)\$(Configuration)\libcurl.pdb");
                 }
 
                 if ("$(Configuration.ToLower())" == "release" ) {
