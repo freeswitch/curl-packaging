@@ -6,6 +6,8 @@ curl-7.*
 curl-7.*/
 openssl-1.*
 openssl-1.*/
+openssl-3.*
+openssl-3.*/
 zlib-1.*
 zlib-1.*/
 7za*.exe
