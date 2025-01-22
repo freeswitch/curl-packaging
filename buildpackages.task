@@ -61,7 +61,7 @@ using System.Diagnostics;
                     File.Copy(from_folder + @"\include\curl\" + f, package_root + @"\include\curl\" + f);
                 }
 
-                ZipFile.CreateFromDirectory(@"$(BaseDir)out\packages\" + package + @"-headers\", @"$(BaseDir)out\" + package + @"-headers.zip".ToLower(), CompressionLevel.Optimal, false);
+                ZipFile.CreateFromDirectory(@"$(BaseDir)out\packages\" + package + @"-headers\", @"$(BaseDir)out\" + package + @"_$(curlBuildNumber)" + @"-headers.zip".ToLower(), CompressionLevel.Optimal, false);
             }
 
             package_root = @"$(BaseDir)out\packages\" + package + @"-binaries-$(Platform)-$(Configuration)\" + package;
@@ -77,7 +77,7 @@ using System.Diagnostics;
                     File.Copy(from_folder + @"build-$(Platform)\lib\$(Configuration)\libcurl.lib", package_root + @"\binaries\$(Platform)\$(Configuration)\curl.lib");
                 }
 
-                ZipFile.CreateFromDirectory(@"$(BaseDir)out\packages\" + package + @"-binaries-$(Platform)-$(Configuration)\", @"$(BaseDir)out\" + package + @"-binaries-$(Platform)-$(Configuration).zip".ToLower(), CompressionLevel.Optimal, false);
+                ZipFile.CreateFromDirectory(@"$(BaseDir)out\packages\" + package + @"-binaries-$(Platform)-$(Configuration)\", @"$(BaseDir)out\" + package + @"_$(curlBuildNumber)" + @"-binaries-$(Platform)-$(Configuration).zip".ToLower(), CompressionLevel.Optimal, false);
             }
 
             return true;
